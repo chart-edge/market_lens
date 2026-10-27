@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Market Lens — daily market observations, technical analysis, trading ideas, and lessons in risk management.">
+  <meta name="theme-color" content="#0b1115">
+  <title>Market Lens — Trading Insights</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span class="status-dot"></span> INDEPENDENT MARKET JOURNAL <span class="announcement-right">CLARITY OVER NOISE · PROCESS OVER PREDICTION</span></div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Market Lens home"><span class="brand-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="17" cy="17" r="10.5"/><path d="m25 25 8 8M10 20l5-6 4 4 6-8"/></svg></span><span class="brand-name">MARKET<span>LENS</span><small>SEE THE MARKET CLEARLY</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav"><a href="#insights">Insights</a><a href="#markets">Markets</a><a href="#method">Our approach</a><a href="#about">About</a></nav>
+    <a class="header-button" href="#insights">Explore insights <span>↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> YOUR DAILY MARKET PERSPECTIVE</p>
+        <h1>See beyond<br>the <em>price.</em></h1>
+        <p class="hero-lede">A clearer view of the markets through structured technical analysis, trading observations, and lessons from the process.</p>
+        <div class="hero-buttons"><a class="button primary" href="#insights">Explore market insights <span>→</span></a><a class="button text-button" href="#method">The Market Lens approach <span>↗</span></a></div>
+        <div class="hero-footnote"><span class="status-dot"></span> Independent analysis. No guaranteed outcomes.</div>
+      </div>
+      <div class="hero-art">
+        <div class="chart-window">
+          <div class="window-head"><div class="window-title"><span class="window-kicker">MARKET LENS / CHART STUDY</span><strong>Structure before signal</strong></div><span class="pill">ILLUSTRATIVE</span></div>
+          <div class="chart-metrics"><div><small>Primary focus</small><strong>Market structure</strong></div><div><small>Decision framework</small><strong>Plan · Risk · Review</strong></div></div>
+          <svg class="candles" viewBox="0 0 510 245" role="img" aria-label="Decorative illustrative candlestick chart, not live market data">
+            <defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8de0b1" stop-opacity=".2"/><stop offset="1" stop-color="#8de0b1" stop-opacity="0"/></linearGradient></defs>
+            <g class="gridlines"><path d="M0 35H510M0 80H510M0 125H510M0 170H510M0 215H510"/></g>
+            <path class="chart-area" d="M0 188 L27 174 L54 181 L81 146 L108 157 L135 125 L162 139 L189 102 L216 118 L243 82 L270 98 L297 67 L324 81 L351 49 L378 66 L405 37 L432 53 L459 27 L510 20 L510 245 L0 245Z"/>
+            <path class="chart-line" d="M0 188 L27 174 L54 181 L81 146 L108 157 L135 125 L162 139 L189 102 L216 118 L243 82 L270 98 L297 67 L324 81 L351 49 L378 66 L405 37 L432 53 L459 27 L510 20"/>
+            <path class="level" d="M0 155H510"/><text x="7" y="148" class="level-label">REFERENCE LEVEL</text>
+            <g class="candle-set">
+              <path d="M33 120V165M26 130H40M26 151H40" class="down"/><rect x="27" y="130" width="12" height="21" class="down-fill"/>
+              <path d="M69 113V150M62 122H76M62 139H76" class="up"/><rect x="63" y="122" width="12" height="17" class="up-fill"/>
+              <path d="M105 103V159M98 116H112M98 142H112" class="down"/><rect x="99" y="116" width="12" height="26" class="down-fill"/>
+              <path d="M141 92V132M134 102H148M134 119H148" class="up"/><rect x="135" y="102" width="12" height="17" class="up-fill"/>
+              <path d="M177 77V124M170 89H184M170 108H184" class="up"/><rect x="171" y="89" width="12" height="19" class="up-fill"/>
+              <path d="M213 81V133M206 95H220M206 116H220" class="down"/><rect x="207" y="95" width="12" height="21" class="down-fill"/>
+              <path d="M249 60V105M242 72H256M242 91H256" class="up"/><rect x="243" y="72" width="12" height="19" class="up-fill"/>
+              <path d="M285 48V97M278 60H292M278 81H292" class="up"/><rect x="279" y="60" width="12" height="21" class="up-fill"/>
+              <path d="M321 53V108M314 66H328M314 91H328" class="down"/><rect x="315" y="66" width="12" height="25" class="down-fill"/>
+              <path d="M357 34V82M350 46H364M350 65H364" class="up"/><rect x="351" y="46" width="12" height="19" class="up-fill"/>
+              <path d="M393 27V74M386 38H400M386 58H400" class="up"/><rect x="387" y="38" width="12" height="20" class="up-fill"/>
+              <path d="M429 19V65M422 30H436M422 48H436" class="down"/><rect x="423" y="30" width="12" height="18" class="down-fill"/>
+              <path d="M465 15V54M458 25H472M458 41H472" class="up"/><rect x="459" y="25" width="12" height="16" class="up-fill"/>
+            </g>
+          </svg>
+          <div class="chart-legend"><span><i class="legend-up"></i> Price action</span><span><i class="legend-level"></i> Reference level</span><span>Conceptual chart only</span></div>
+        </div>
+        <div class="floating-card"><span class="floating-icon">◎</span><div><strong>Clarity over noise</strong><small>Context first. Decisions second.</small></div></div>
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <div class="principles"><span>01 / MARKET CONTEXT</span><b>✳</b><span>02 / TECHNICAL STRUCTURE</span><b>✳</b><span>03 / RISK MANAGEMENT</span><b>✳</b><span>04 / CONTINUOUS LEARNING</span></div>
+
+    <section class="section insights-section" id="insights">
+      <div class="section-heading"><div><p class="eyebrow">FROM THE NOTEBOOK</p><h2>Latest <em>insights.</em></h2></div><p class="section-description">Ideas and observations to help explain the market, document the reasoning, and learn from every session.</p></div>
+      <div class="filter-bar" role="group" aria-label="Filter insights">
+        <button class="filter active" data-filter="all">All insights <span>03</span></button><button class="filter" data-filter="technical">Technical analysis</button><button class="filter" data-filter="risk">Risk management</button><button class="filter" data-filter="journal">Trading journal</button>
+      </div>
+      <div class="post-grid">
+        <article class="post-card" data-category="technical">
+          <a href="posts/market-structure.html" class="post-art art-structure" aria-label="Read market structure article"><span class="post-label">TECHNICAL ANALYSIS</span><div class="mini-candles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="art-caption">STRUCTURE / LEVELS / CONFIRMATION</span></a>
+          <div class="post-body"><div class="post-meta">STARTER ARTICLE <span>·</span> 4 MIN READ</div><h3><a href="posts/market-structure.html">Read market structure before searching for an entry</a></h3><p>Map the swing highs, swing lows, and key levels before deciding which scenarios deserve attention.</p><a class="read-more" href="posts/market-structure.html">Read the insight <span>→</span></a></div>
+        </article>
+        <article class="post-card" data-category="risk">
+          <a href="posts/risk-management.html" class="post-art art-risk" aria-label="Read risk management article"><span class="post-label">RISK MANAGEMENT</span><div class="risk-illustration"><div class="risk-circle">R<span>:</span>R</div><div class="risk-bars"><i></i><i></i><i></i><i></i></div></div><span class="art-caption">DEFINE RISK BEFORE REWARD</span></a>
+          <div class="post-body"><div class="post-meta">STARTER ARTICLE <span>·</span> 3 MIN READ</div><h3><a href="posts/risk-management.html">Why a risk plan comes before a profit target</a></h3><p>Think about invalidation, position sizing, and acceptable loss before a trade becomes real.</p><a class="read-more" href="posts/risk-management.html">Read the insight <span>→</span></a></div>
+        </article>
+        <article class="post-card" data-category="journal">
+          <a href="posts/trade-review.html" class="post-art art-journal" aria-label="Read trading journal article"><span class="post-label">TRADING JOURNAL</span><div class="paper"><strong>SESSION REVIEW</strong><i></i><i></i><i></i><i></i><b>PROCESS &gt; OUTCOME</b></div><span class="art-caption">REVIEW / REFINE / REPEAT</span></a>
+          <div class="post-body"><div class="post-meta">STARTER ARTICLE <span>·</span> 3 MIN READ</div><h3><a href="posts/trade-review.html">Review a trade without judging it by profit alone</a></h3><p>Separate decision quality from the result and look for patterns across a meaningful sample.</p><a class="read-more" href="posts/trade-review.html">Read the insight <span>→</span></a></div>
+        </article>
+      </div>
+      <p class="starter-note">These are educational starter articles, not current market calls. Replace them with your own insights as you publish.</p>
+    </section>
+
+    <section class="markets-section" id="markets"><div class="markets-inner"><div><p class="eyebrow">MARKETS IN FOCUS</p><h2>One lens.<br><em>Multiple markets.</em></h2><p class="section-description">Choose the markets you want to study and publish insights about. Market Lens does not display live prices in this starter version.</p></div><div class="market-list"><div><span class="market-symbol">IN</span><span><strong>Indian markets</strong><small>NIFTY · BANKNIFTY · Equities</small></span><span class="market-arrow">↗</span></div><div><span class="market-symbol gold">Au</span><span><strong>Gold & forex</strong><small>XAUUSD · Major currency pairs</small></span><span class="market-arrow">↗</span></div><div><span class="market-symbol blue">US</span><span><strong>Global equities</strong><small>Company and index analysis</small></span><span class="market-arrow">↗</span></div></div></div></section>
+
+    <section class="method-section" id="method"><div class="method-heading"><p class="eyebrow">THE MARKET LENS METHOD</p><h2>Observe. Plan. <em>Review.</em></h2><p>A repeatable process matters more than a confident prediction.</p></div><div class="method-grid"><div><span>01</span><h3>Observe context</h3><p>Describe the trend, structure, volatility, and levels without forcing a bias.</p></div><div><span>02</span><h3>Build scenarios</h3><p>Write down what could happen, what would confirm it, and what would invalidate it.</p></div><div><span>03</span><h3>Respect risk</h3><p>Consider position sizing, costs, uncertainty, and the potential for losses.</p></div><div><span>04</span><h3>Review evidence</h3><p>Record what happened and learn from the quality of the decision—not just the outcome.</p></div></div></section>
+
+    <section class="about-section" id="about"><div class="about-mark">ML<span> / ABOUT</span></div><div><p class="eyebrow">THE IDEA BEHIND MARKET LENS</p><h2>Less noise.<br><em>More perspective.</em></h2></div><div class="about-copy"><p>Market Lens is an independent space for documenting market observations, technical setups, risk considerations, and lessons learned. The goal is to make the thinking visible—not to promise certainty.</p><p class="disclaimer">Disclaimer: Content is for educational and informational purposes only and is not investment advice or a recommendation to buy or sell any financial instrument. Trading and investing involve risk, including loss of capital. Verify information independently and make decisions based on your own circumstances.</p></div></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="17" cy="17" r="10.5"/><path d="m25 25 8 8M10 20l5-6 4 4 6-8"/></svg></span><span class="brand-name">MARKET<span>LENS</span><small>SEE THE MARKET CLEARLY</small></span></a><span class="footer-line">Independent thinking. Disciplined execution.</span><a class="back-top" href="#home">BACK TO TOP ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
