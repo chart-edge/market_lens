@@ -1,35 +1,40 @@
-# Market Lens — GitHub Pages website
+# Market Lens — no-code publishing edition
 
-A responsive, dark editorial-style market insights website made with plain HTML, CSS, and JavaScript. No build tools or paid hosting are required.
+Your existing responsive Market Lens website, upgraded to load articles from `content/posts.json` and support a browser-based publishing editor through Pages CMS. It still uses plain HTML, CSS, and JavaScript and can be hosted on GitHub Pages.
 
-## Files
-- `index.html` — homepage, categories, market sections, disclaimer
-- `style.css` — responsive styling
-- `script.js` — article filters and mobile navigation
-- `posts/` — three educational starter articles
-- `assets/favicon.svg` — site icon
+## What changed
+- Added `.pages.yml` to configure Pages CMS.
+- Added `content/posts.json` with the three starter articles.
+- Added `article.html` so each insight has its own shareable article URL.
+- The homepage loads published articles from the JSON file and filters by category.
+- Added an optional chart screenshot field for each article.
 
-## Publish it using GitHub Pages
-1. Sign in to https://github.com/
-2. Create a **public** repository named `YOUR-USERNAME.github.io` (replace with your GitHub username).
-3. Extract this ZIP and upload all files and folders into the repository root. Make sure `index.html` is at the root, not inside another folder.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, select **Deploy from a branch**.
-6. Select branch `main`, folder `/(root)`, and click **Save**.
-7. Wait for the deployment to finish. Your personal site will usually be available at `https://YOUR-USERNAME.github.io/`.
+## Upload the updated site to your existing GitHub repository
+1. Extract this ZIP on your computer.
+2. Open your existing repository: https://github.com/chart-edge/market_lens
+3. Upload/replace the site files and folders in the repository root. Keep `index.html` in the root. Ensure `.pages.yml`, `article.html`, `content/posts.json`, and `media/` are included.
+4. Commit the changes. GitHub Pages should redeploy automatically.
 
-Official GitHub instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+**Important:** Upload the contents of the `market_lens-main` folder, not the outer folder itself. Do not delete repository settings.
 
-## Publish a new insight
-For a simple manual workflow:
-1. Create a new HTML file inside `posts/` by copying one of the starter articles and replacing its title/content.
-2. Add a new `<article class="post-card" data-category="...">...</article>` block to the post grid in `index.html`. Use category `technical`, `risk`, or `journal`.
-3. Commit your changes. GitHub Pages deploys the update automatically.
+## Connect the no-code editor
+1. Visit https://app.pagescms.org/ and sign in with the GitHub account that owns `chart-edge/market_lens`.
+2. Install/authorize the Pages CMS GitHub App for this repository when prompted.
+3. Open `chart-edge/market_lens` and choose the publishing branch (usually `main`).
+4. Open the **Market analyses** collection. Add/edit a record with title, slug, date, category, summary, chart screenshot, analysis content, and published toggle.
+5. Save/commit your changes. GitHub Pages updates the public website after deployment completes.
 
-You can edit files directly on GitHub using **Add file → Create new file**; keep the `posts/` path in the filename.
+## Important publishing notes
+- Use a unique slug such as `gold-analysis-2026-10-28` (lowercase letters and hyphens).
+- The chart image should be your screenshot or an image you have permission to publish.
+- Set **Show on public website** off to hide a post from the public list.
+- Article text is plain text. Separate paragraphs with blank lines. A line written in ALL CAPS is styled as a section heading.
+- The editor is a separate, sign-in protected dashboard. Readers do not need to log in to read the public website.
+- This is not a live market data feed, and the website does not execute trades. Keep a clear educational disclaimer.
 
-## Before sharing
-- Replace the sample articles with your own original insights.
-- Do not represent the decorative chart as live market data.
-- Keep the educational disclaimer visible.
-- This static starter has no login, comments, database, live market feed, or private publishing dashboard.
+## Quick checks after publishing
+- Homepage: https://chart-edge.github.io/market_lens/
+- Editor: https://app.pagescms.org/
+- Open an article card to check its detail page and chart image.
+
+If you already have custom changes in your live repository, back up the repository before replacing files.

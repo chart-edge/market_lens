@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Read market structure before searching for an entry",
+    "slug": "market-structure",
+    "date": "2026-10-01",
+    "category": "technical",
+    "excerpt": "Map swing highs, swing lows, and key levels before deciding which scenarios deserve attention.",
+    "chart_image": "",
+    "body": "EDUCATIONAL STARTER ARTICLE — not a live market analysis or trading signal.\n\nSTART WITH CONTEXT\nZoom out and identify the sequence of swing highs and swing lows. Is price forming higher highs and higher lows, lower highs and lower lows, or moving sideways? Treat this as a working description of the chart, not a prediction of what must happen next.\n\nMARK ONLY MEANINGFUL LEVELS\nLook for a small number of levels with a clear reason to matter: recent swing points, range boundaries, or areas where price previously reacted. Too many lines can make random movement look significant.\n\nWRITE DOWN MORE THAN ONE SCENARIO\nDescribe what supports your view, what would invalidate it, and what confirmation you need. Decide the maximum acceptable risk before considering a trade.\n\nJOURNAL PROMPT\nRecord the instrument, timeframe, market structure, key levels, possible scenarios, invalidation conditions, and one thing you learned after the session.",
+    "published": true
+  },
+  {
+    "title": "Why a risk plan comes before a profit target",
+    "slug": "risk-management",
+    "date": "2026-10-02",
+    "category": "risk",
+    "excerpt": "A trade idea is incomplete until you know where it is wrong and how much you could lose.",
+    "chart_image": "",
+    "body": "EDUCATIONAL STARTER ARTICLE — not a live market recommendation.\n\nDEFINE THE INVALIDATION POINT\nBefore entering a trade, identify the price or condition that would show the idea is no longer valid. Avoid choosing a stop only because it creates a convenient reward-to-risk ratio.\n\nSIZE THE POSITION AROUND RISK\nPosition size should follow your predefined risk limit and the distance to your invalidation point. Consider fees, slippage, gaps, leverage, and the possibility that execution may be worse than expected.\n\nUSE A CONSISTENT CHECKLIST\nWhat evidence supports the setup? What would invalidate the idea? What is the maximum planned loss? Is the potential reward reasonable for the setup and market conditions?\n\nA stop-loss can help define planned risk, but it cannot guarantee an exact exit price in fast-moving or illiquid markets.\n\nJOURNAL PROMPT\nRecord planned risk, actual risk, whether you followed your plan, and one specific improvement for your next review.",
+    "published": true
+  },
+  {
+    "title": "Review a trade without judging it by profit alone",
+    "slug": "trade-review",
+    "date": "2026-10-03",
+    "category": "journal",
+    "excerpt": "Review your decision-making process separately from the financial outcome.",
+    "chart_image": "",
+    "body": "EDUCATIONAL STARTER ARTICLE — not a live market recommendation.\n\nSEPARATE PROCESS FROM OUTCOME\nA profitable trade can still break your rules, while a losing trade can follow a sound plan. Review what you knew and decided at the time, rather than using the result as the only measure of quality.\n\nASK THE SAME QUESTIONS EVERY TIME\nDid the setup meet my written criteria? Was the entry based on confirmation or emotion? Was position size within my risk limits? Did I follow my exit plan? What was within my control, and what was uncertainty?\n\nLOOK FOR PATTERNS OVER A SAMPLE\nOne trade rarely proves a strategy works or fails. Track a meaningful series of trades, keep your rules consistent, and avoid changing the method after every result.\n\nJOURNAL PROMPT\nWrite one thing you executed well, one thing to improve, and one specific action to test in your next review.",
+    "published": true
+  }
+]
