@@ -1,5 +1,6 @@
 // Market Lens: static-site blog powered by content/posts.json (editable with Pages CMS).
 const categoryLabels = { technical: "TECHNICAL ANALYSIS", risk: "RISK MANAGEMENT", journal: "TRADING JOURNAL" };
+const isArchivePage = document.body.classList.contains("archive-page");
 const safe = (value = "") => String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const dateLabel = value => { const d = new Date(`${value}T12:00:00`); return Number.isNaN(d.getTime()) ? value : d.toLocaleDateString("en-US", {year:"numeric",month:"short",day:"numeric"}); };
 function articleBody(text) {
@@ -20,23 +21,18 @@ async function loadPosts() {
     const posts = (await response.json()).filter(p => p.published !== false).sort((a,b) => String(b.date).localeCompare(String(a.date)));
     const grid = document.querySelector(".post-grid");
     if (grid) {
-      grid.innerHTML = posts.length ? posts.map(card).join("") : '<p class="loading-posts">No published insights yet. Check back soon.</p>';
+      const visiblePosts = isArchivePage ? posts : posts.slice(0, 4);
+      grid.innerHTML = visiblePosts.length ? visiblePosts.map(card).join("") : '<p class="loading-posts">No published insights yet. Check back soon.</p>';
       const count = document.getElementById("allCount"); if (count) count.textContent = String(posts.length).padStart(2,"0");
-      const buttons = document.querySelectorAll(".filter");
-      buttons.forEach(button => button.addEventListener("click", () => {
-        buttons.forEach(item => item.classList.remove("active")); button.classList.add("active");
-        const selected = button.dataset.filter;
-        grid.querySelectorAll(".post-card").forEach(item => { item.hidden = selected !== "all" && item.dataset.category !== selected; });
-      }));
     }
     const articleRoot = document.getElementById("dynamicArticle");
     if (articleRoot) {
       const slug = new URLSearchParams(location.search).get("slug");
       const post = posts.find(p => p.slug === slug);
-      if (!post) { articleRoot.innerHTML = '<h1>Insight not found</h1><p>This article may have been unpublished or the link may be incorrect.</p><a class="article-back" href="index.html#insights">← BACK TO ALL INSIGHTS</a>'; return; }
+      if (!post) { articleRoot.innerHTML = '<h1>Insight not found</h1><p>This article may have been unpublished or the link may be incorrect.</p><a class="article-back" href="insights.html">← BACK TO ALL INSIGHTS</a>'; return; }
       document.title = `${post.title} | Market Lens`;
       const img = post.chart_image ? `<figure class="article-chart"><img src="${safe(post.chart_image)}" alt="Chart screenshot for ${safe(post.title)}"><figcaption>Chart shared for educational discussion.</figcaption></figure>` : "";
-      articleRoot.innerHTML = `<a class="article-back" href="index.html#insights">← BACK TO ALL INSIGHTS</a><p class="article-label">${safe(categoryLabels[post.category] || "MARKET INSIGHT")} · ${safe(dateLabel(post.date))}</p><h1>${safe(post.title)}</h1><p class="lede">${safe(post.excerpt)}</p>${img}<div class="article-body">${articleBody(post.body)}</div><div class="article-callout">Educational content only. This is not financial advice or a recommendation to buy or sell any instrument. Trading involves risk.</div><p><a class="article-back" href="index.html#insights">← RETURN TO MARKET LENS</a></p>`;
+      articleRoot.innerHTML = `<a class="article-back" href="insights.html">← BACK TO ALL INSIGHTS</a><p class="article-label">${safe(categoryLabels[post.category] || "MARKET INSIGHT")} · ${safe(dateLabel(post.date))}</p><h1>${safe(post.title)}</h1><p class="lede">${safe(post.excerpt)}</p>${img}<div class="article-body">${articleBody(post.body)}</div><div class="article-callout">Educational content only. This is not financial advice or a recommendation to buy or sell any instrument. Trading involves risk.</div><p><a class="article-back" href="insights.html">← RETURN TO ALL INSIGHTS</a></p>`;
     }
   } catch (error) {
     const grid = document.querySelector(".post-grid");
